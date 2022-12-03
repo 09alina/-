@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "2d07df90-a015-4ae5-834d-59a6ea651baa",
+		"name": "BURNING MAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23651072"
+	},
+	"item": [
+		{
+			"name": "Валидация банковской карты",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "CartNumber",
+							"value": "{{CartNumber}}",
+							"type": "text"
+						},
+						{
+							"key": "DateMonth",
+							"value": "{{DateMonth}}",
+							"type": "text"
+						},
+						{
+							"key": "СVV",
+							"value": "{{СVV}}",
+							"type": "text"
+						},
+						{
+							"key": "DateYear",
+							"value": "{{DateYear}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://09alina.github.io/test/payment",
+					"protocol": "https",
+					"host": [
+						"09alina",
+						"github",
+						"io"
+					],
+					"path": [
+						"test",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://reqres.in/api/login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/login",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://reqres.in/api/users?page=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://reqres.in/api/unknown",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/unknown",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"unknown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://reqres.in/api/users/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "CartNumber",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "DateMonth",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "СVV",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "DateYear",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
